@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;500;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background: rgb(2, 7, 58);
+  color: rgb(0, 2, 17);
+}
+#root {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.App {
+  flex: 1;
+  max-width: 500px;
+  background-color: rgb(241, 241, 241);
+  padding: 20px;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  margin-inline: 15px;
+}
+@media (max-width: 500px) {
+  .App {
+    width: 100%;
+    padding: 10px 5px;
+
+    margin-inline: 5px;
+  }
+}
+h1 {
+  font-weight: 500;
+}
+.container {
+  width: 100%;
+}
+.form {
+  margin-top: 20px;
+  background-color: #eee;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+}
+.input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  flex: 1;
+  font-size: 18px;
+}
+
+.input:focus {
+  outline: none;
+}
+.add,
+.clear {
+  border: none;
+  background-color: #2196f3;
+  color: white;
+  padding: 8px;
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: 6px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+:is(.add, .clear):hover {
+  opacity: 0.8;
+}
+.error {
+  color: #f44336;
+}
+.tasks {
+  margin-top: 30px;
+  background-color: #eee;
+  border-radius: 6px;
+}
+.tasks .task {
+  background-color: white;
+  padding: 10px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s;
+  cursor: pointer;
+  border: 1px solid #ccc;
+}
+.tasks .task:not(:last-child) {
+  margin-bottom: 15px;
+}
+.tasks .task:hover {
+  background-color: #f7f7f7;
+}
+.tasks .task span {
+  font-size: 12px;
+  background-color: #f44336;
+  color: white;
+  padding: 3px 6px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.footer {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
