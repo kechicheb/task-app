@@ -62,7 +62,6 @@ export default function TaskList() {
         <Item
           task={task}
           deleteTask={() => deleteTask(task.id)}
-          index={index}
           updateTask={() => updateTask(task.id, task.text)}
         />
       </div>
