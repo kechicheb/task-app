@@ -46,6 +46,7 @@ export default function TaskList() {
         setUpdating("");
       }
     }
+    document.querySelector(".input").focus();
   };
   const updateTask = (id, text) => {
     setUpdating(id);
@@ -55,6 +56,10 @@ export default function TaskList() {
   function deleteTask(id) {
     const newArray = tasks.filter((task) => task.id !== id);
     setTasks(newArray);
+    if (tasks.length) {
+      setUpdating("");
+      setText("");
+    }
   }
   const allTasks = tasks.map((task, index) => {
     return (
@@ -80,6 +85,7 @@ export default function TaskList() {
           setText={setText}
           addUpdateTask={addUpdateTask}
           isUpdating={isUpdating}
+          tasks={tasks}
         />
         <div className="error">{error}</div>
         <div className="tasks">{allTasks}</div>
