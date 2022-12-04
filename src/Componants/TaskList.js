@@ -65,7 +65,7 @@ export default function TaskList() {
     return (
       <div className="task" key={task.id}>
         <Item
-          task={task}
+          task={task} staztus
           deleteTask={() => deleteTask(task.id)}
           updateTask={() => updateTask(task.id, task.text)}
         />
